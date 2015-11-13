@@ -7,6 +7,10 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+var dotenv = require('dotenv');
+dotenv.load();
+
+
 // Connecting to the database and requiring schemas
 var mongoose = require('mongoose');
 require('./models/Clients');
