@@ -8,6 +8,7 @@ var PostSchema = new mongoose.Schema(
         category: String,
         link: String,
         author: String,
+        image: String, 
         comments: [
             {
                 type: mongoose.Schema.Types.ObjectId,
