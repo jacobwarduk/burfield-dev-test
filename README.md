@@ -50,6 +50,31 @@ ___
 ## Admin API REST Routes ##
 There is no back-end interface, however the following API REST routes have been set up that can be used to make requests.
 
+All requests respond in JSON format.
+
+#### Clients ####
+
+##### GET /clients ####
+
+Returns a collection of all clients' data.
+
+##### GET /clients/:id ####
+
+Returns a single client's data.
+
+##### POST /clients #####
+
+Adds a new client.
+
+**Parameters**
+ - name
+ - logo
+
+Example usage:
+`curl --data 'name=nike&logo=/img/clients/nike-logo.png' http://localhost:3000/clients`
+
+Response:
+`{"_id":"5646081bf1148f3e1ac2cf7e","name":"Nike","logo":"/img/clients/nike-logo.png"}`
 
 
 ---

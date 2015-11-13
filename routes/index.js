@@ -7,7 +7,7 @@ var router = express.Router();
 
 var Client = mongoose.model('Client');
 var Comment = mongoose.model('Comment');
-var Gallery = mogoose.model('Gallery');
+var Gallery = mongoose.model('Gallery');
 var Post = mongoose.model('Post');
 var Service = mongoose.model('Service');
 var Team = mongoose.model('Team');

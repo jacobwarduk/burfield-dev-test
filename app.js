@@ -5,10 +5,20 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var app = express();
+
+// Connecting to the database and requiring schemas
+var mongoose = require('mongoose');
+require('./models/Clients');
+require('./models/Comments');
+require('./models/Gallery');
+require('./models/Posts');
+require('./models/Services');
+require('./models/Team');
+mongoose.connect('mongodb://localhost/burfield');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
