@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    "public/scripts/javascript.min.js": "public/scripts/javascript.js"
+                    "public/js/javascript.min.js": "public/js/javascript.js"
                 }
             }
         },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    "public/styles/style.css": "public/styles/style.scss"
+                    "public/css/style.css": "public/css/style.scss"
                 }
             }
         },
@@ -32,13 +32,13 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    "public/styles/style.min.css": "public/styles/style.css"
+                    "public/css/style.min.css": "public/css/style.css"
                 }
             }
         },
 
         watch: {
-            files: ["public/styles/style.scss", "public/scripts/javascript.js"],
+            files: ["public/css/style.scss", "public/js/javascript.js"],
             tasks: ["uglify", "scss", "cssmin"]
         }
 
