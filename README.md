@@ -52,17 +52,17 @@ There is no back-end interface, however the following API REST routes have been 
 
 All requests respond in JSON format.
 
-#### Clients ####
+### Clients ###
 
-##### GET /clients ####
+#### GET /clients ####
 
 Returns a collection of all clients' data.
 
-##### GET /clients/:id ####
+#### GET /clients/:id ####
 
 Returns a single client's data.
 
-##### POST /clients #####
+#### POST /clients ####
 
 Adds a new client.
 
@@ -70,11 +70,34 @@ Adds a new client.
  - name
  - logo
 
-Example usage:
-`curl --data 'name=nike&logo=/img/clients/nike-logo.png' http://localhost:3000/clients`
+Example usage: `curl --data 'name=nike&logo=/img/clients/nike-logo.png' http://localhost:3000/clients`
 
-Response:
-`{"_id":"5646081bf1148f3e1ac2cf7e","name":"Nike","logo":"/img/clients/nike-logo.png"}`
+Response: `{"_id":"5646081bf1148f3e1ac2cf7e","name":"Nike","logo":"/img/clients/nike-logo.png"}`
+
+
+### Team ###
+
+#### GET /team ####
+
+Returns a collection of all team members.
+
+#### GET /team/:id ####
+
+Returns a single team member's details.
+
+#### POST /team ####
+
+Adds a new team member.
+
+**Parameters**
+ - name
+ - position
+ - description
+ - photo
+
+Example usage: `curl --data 'name=Meg Mosley&position=Digital Marketing Director&description=Meg has funny bones and will most likely think you’re a hoot! She finds her creative inspiration everywhere and in everyone.&photo=/img/team/meg-mosley-profile.png' http://localhost:3000/team`
+
+Response: `{"_id":"56460d0b9d1838a21c714a44","name":"Meg Mosley","position":"Digital Marketing Director","description":"Meg has funny bones and will most likely think you’re a hoot! She finds her creative inspiration everywhere and in everyone.","photo":"/img/team/meg-mosley-profile.png","__v":0}`
 
 
 ---
