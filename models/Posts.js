@@ -6,7 +6,6 @@ var PostSchema = new mongoose.Schema(
     title: String,
     body: String,
     category: String,
-    link: String,
     author: String,
     image: String,
     comments: [

@@ -60,7 +60,7 @@ Returns a collection of all clients' data.
 
 #### GET /clients/:id ####
 
-Returns a single client's data.
+Returns a single client's data specified by `:id`.
 
 #### POST /clients ####
 
@@ -75,7 +75,7 @@ Example usage: `curl --data 'name=nike&logo=/img/clients/nike-logo.png' http://l
 Response: `{"_id":"5646081bf1148f3e1ac2cf7e","name":"Nike","logo":"/img/clients/nike-logo.png"}`
 
 
-### Team ###
+### Team Members ###
 
 #### GET /team ####
 
@@ -83,7 +83,7 @@ Returns a collection of all team members.
 
 #### GET /team/:id ####
 
-Returns a single team member's details.
+Returns a single team member's details specified by `:id`.
 
 #### POST /team ####
 
@@ -98,6 +98,85 @@ Adds a new team member.
 Example usage: `curl --data 'name=Meg Mosley&position=Digital Marketing Director&description=Meg has funny bones and will most likely think you’re a hoot! She finds her creative inspiration everywhere and in everyone.&photo=/img/team/meg-mosley-profile.png' http://localhost:3000/team`
 
 Response: `{"_id":"56460d0b9d1838a21c714a44","name":"Meg Mosley","position":"Digital Marketing Director","description":"Meg has funny bones and will most likely think you’re a hoot! She finds her creative inspiration everywhere and in everyone.","photo":"/img/team/meg-mosley-profile.png","__v":0}`
+
+
+### Gallery ###
+
+#### GET /gallery ####
+
+Returns a collection of all gallery items.
+
+#### GET /gallery/:id ####
+
+Returns a single gallery item specified by `:id`.
+
+#### POST /gallery ####
+
+Adds a new gallery item.
+
+**Parameters**
+ - title
+ - description
+ - image
+
+
+### Services ###
+
+#### GET /services ####
+
+Returns a collection of all services.
+
+#### GET /services/:id ####
+
+Returns a single service's details specified by `:id`.
+
+#### POST ####
+
+Adds a new service.
+
+**Parameters**
+ - title
+ - excerpt
+ - description
+ - image
+
+
+### Blog Posts ###
+
+#### GET /posts ####
+
+Returns a collection of all blog posts.
+
+#### GET /posts/:id ####
+
+Returns a single blog post specified by `:id`.
+
+#### POST /posts ####
+
+Adds a new blog post.
+
+**Parameters**
+ - title
+ - body
+ - category
+ - author
+ - image
+
+
+### Blog Comments ###
+
+#### GET /posts/:id/comments ####
+
+Returns a collection of all comments for blog post specified by `:id`.
+
+#### POST /posts/:id/comments ####
+
+Adds a new comment to blog post specified by `:id`.
+
+**Parameters**
+ - body
+ - author
+ - post
 
 
 ---
