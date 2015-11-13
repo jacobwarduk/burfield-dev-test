@@ -80,7 +80,7 @@ router.get('/clients/:client', function(req, res, next) {
   res.json(req.client);
 });
 
-// Route to return a single gallery article
+// Route to return a single gallery item
 router.get('/gallery/:gallery', function(req, res, next) {
   if (err) {
     return next(err);
@@ -115,8 +115,85 @@ router.get('/team/:member', function(req, res, next) {
 });
 
 
+// Route to add a new client
+router.post('/clients', function(req, res, next) {
+  var client = new Client(req.body);
 
+  client.save(function(err, client) {
+    if (err) {
+      return next(err);
+    }
+    res.json(client);
+  });
+});
 
+// Route to add new blog post comment
+router.post('/posts/:post/comments', function(req, res, next) {
+  var comment = new Comment(req.body);
+
+  comment.post = req.post;
+
+  comment.save(function(err, comment) {
+    if (err) {
+        return next(err);
+    }
+    req.post.comments.push(comment);
+    req.post.save(function(err, post) {
+      if (err) {
+        return next(err);
+      }
+      res.json(comment);
+    });
+  });
+});
+
+// Route to add new gallery item
+router.post('/gallery', function(req, res, next) {
+  var item = new Gallery(req.body);
+
+  item.save(function(err, item) {
+    if (err) {
+      return next(err);
+    }
+    res.json(item);
+  });
+});
+
+// Route to add a new blog post
+router.post('/posts', function(req, res, next) {
+  var post = new Post(req.body);
+
+  post.save(function(err, post) {
+    if (err) {
+      return next(err);
+    }
+    res.json(post);
+  });
+});
+
+// Route to add a new service
+router.post('/services', function(req, res, next) {
+  var service = new Service(req.body);
+
+  service.save(function(err, service) {
+    if (err) {
+      return next(err);
+    }
+    res.json(service);
+  });
+});
+
+// Route to add new team member
+router.post('/team', function(req, res, next) {
+  var member = new Team(req.body);
+
+  member.save(function(err, member) {
+    if (err) {
+      return next(err);
+    }
+    res.json(member);
+  });
+});
 
 
 

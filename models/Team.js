@@ -8,4 +8,6 @@ var TeamSchema = new mongoose.Schema(
     description: String,
     photo: String
   }
-)
+);
+
+mongoose.model('Team', TeamSchema);
