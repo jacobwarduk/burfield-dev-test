@@ -15,11 +15,16 @@ Front end resources are managed by [Bower](http://bower.io) and back end resourc
 
 ### Populating The Database ###
 
-The database contains data for *Services*, *Clients*, *The Team*, *Gallery*, *Blog Posts* & *Comments*.
+The database stores data for *Services*, *Clients*, *The Team*, *Gallery*, *Blog Posts* & *Comments*.
+
+1. Enter the root directory of the application by issuing the command `cd burfield-dev-test
+`.
+
+2. Import the test database using the command `mongorestore -d burfield ./burfielddb`
 
 
 ### Adding Twitter Authentication ###
-Twitter authentication is required to display the 'latest tweet' in the footer and elsewhere.
+Twitter authentication is required to display the 'latest tweets' in the footer and elsewhere around the site.
 
 1. Create a new Twitter application at [https://apps.twitter.com](https://apps.twitter.com). If you need help, follow the instructions at [http://www.ning.com/help/?p=4955](http://www.ning.com/help/?p=4955).
 
@@ -38,17 +43,17 @@ Create a file named `.env` in the root directory of the application containing y
 1. Enter the root directory of the application by issuing the command `cd burfield-dev-test
 `.
 
-1. Start a **MongoDB** instance in the background by issuing the command `mongod &`.
+2. Start a **MongoDB** instance in the background by issuing the command `mongod &`.
 
-1. Start the **Node.js** web application by issuing the command `npm start`.
+3. Start the **Node.js** web application by issuing the command `npm start`.
 
-1. Visit [http://localhost:3000](http://:3000) in a web browser.
+4. Visit [http://localhost:3000](http://:3000) in a web browser.
 
 ___
 
 
 ## Admin API REST Routes ##
-There is no back-end interface, however the following API REST routes have been set up that can be used to make requests.
+There is no back-end interface or authentication system implemented, however the following API REST routes are available that can be used to make requests.
 
 All requests respond in JSON format.
 
