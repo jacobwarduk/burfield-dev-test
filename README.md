@@ -1,30 +1,20 @@
 # Contents #
 
+ - [About](#about)
  - [Installation](#installation)
- > Getting Started
-
- > Populating The Database
-
- > Adding Twitter Authentication
-
- > Starting The Server
-
- - [Admin API REST Routes](#admin-api-rest-routes)
- > Clients
-
- > Team Members
-
- > Gallery
-
- > Services
-
- > Blog Posts
-
- > Blog Comments
-
+ - [REST API Routes](#admin-api-rest-routes)
  - [To Do](#to-do)
 
 ---
+
+## About ##
+
+Solution developed in full stack JavaScript -  Node.js, MongoDB and AngularJS.
+
+Sass and JavaScript files are compiled and minified using [Grunt](http://gruntjs.com/). Details can be found in `Gruntfile.js`.
+
+Front end resources are managed by [Bower](http://bower.io) and back end resources by [npm](https://www.npmjs.com). Details can be found in `bower.json` and `package.json`, respectively.
+
 
 
 ## Installation ##
@@ -33,12 +23,7 @@
 
 2. Download and install **MongoDB** from [https://www.mongodb.org/downloads](https://www.mongodb.org/downloads).
 
-3. Clone the Git repo by issuing the command `git clone https://github.com/jacobwarduk/burfield-dev-test.git`
-
-
-Sass and JavaScript files are compiled and minified using [Grunt](http://gruntjs.com/). Details can be found in `Gruntfile.js`.
-
-Front end resources are managed by [Bower](http://bower.io) and back end resources by [npm](https://www.npmjs.com). Details can be found in `bower.json` and `package.json`, respectively.
+3. Clone the Git repo by issuing the command `git clone https://github.com/jacobwarduk/burfield-dev-test.git`.
 
 
 
