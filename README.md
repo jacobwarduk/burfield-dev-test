@@ -15,6 +15,7 @@ Sass and JavaScript files are compiled and minified using [Grunt](http://gruntjs
 
 Front end resources are managed by [Bower](http://bower.io) and back end resources by [npm](https://www.npmjs.com). Details can be found in `bower.json` and `package.json`, respectively.
 
+---
 
 
 ## Installation ##
