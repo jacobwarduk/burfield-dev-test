@@ -20,7 +20,7 @@ The database stores data for *Services*, *Clients*, *The Team*, *Gallery*, *Blog
 1. Enter the root directory of the application by issuing the command `cd burfield-dev-test
 `.
 
-2. Import the test database using the command `mongorestore -d burfield ./burfielddb`
+2. Import the test database using the command `mongorestore -d burfield ./burfielddb`.
 
 
 ### Adding Twitter Authentication ###
@@ -185,3 +185,10 @@ Adds a new comment to blog post specified by `:id`.
 
 
 ---
+
+## To Do ##
+
+ - Make more suitable break points for responsive layout.
+ - Create an authentication system and API end points.
+ - Create REST API routes for `DELETE` and `PUT` HTTP requests.
+ - Create a back end interface for managing content.
