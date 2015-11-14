@@ -100,7 +100,7 @@ app.factory('team', ['$http', function($http) {
     });
   };
 
-  return c; // Returning the clients object
+  return t; // Returning the clients object
 }]);
 
 // Service for blog posts
@@ -139,7 +139,7 @@ app.controller('MainCtrl', [
   'services',
   'team',
   'posts',
-  function($scope, clients, posts) {
+  function($scope, clients, gallery, services, team, posts) {
     $scope.clients = clients.clients;
     $scope.gallery = gallery.gallery;
     $scope.services = services.services;
