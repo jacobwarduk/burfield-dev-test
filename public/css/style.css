@@ -24,7 +24,7 @@ a {
   max-width: 100%; }
 
 header .header {
-  padding: 5px; }
+  padding: 5px 5px 20px 5px; }
 header .navbar-default {
   background: none;
   border: 0; }
@@ -33,11 +33,10 @@ header nav {
   header nav .nav {
     background-color: #3c3f3f;
     width: 100%; }
-    header nav .nav li a:hover {
+    header nav .nav li a:hover, header nav .nav li a:active, header nav .nav li a:visited {
       color: white;
-      background-color: #292b2b; }
-    header nav .nav li a.active {
-      background-color: #292b2b; }
+      background-color: #292b2b;
+      text-transform: uppercase; }
   header nav ul li {
     height: 100%;
     font-size: 1.2em; }
@@ -50,14 +49,17 @@ header .header-contact {
   header .header-contact address {
     display: inline; }
 header .header-social {
-  text-align: right; }
+  text-align: right;
+  font-size: 2em; }
   header .header-social ul {
     list-style: none; }
     header .header-social ul li {
       display: inline-block; }
       header .header-social ul li a {
         display: inline-block;
-        color: #191919; }
+        color: #3c3f3f; }
+        header .header-social ul li a:hover {
+          color: #292b2b; }
 
 footer {
   color: white;
@@ -74,6 +76,12 @@ footer {
     background-color: black; }
     footer .footer-bottom a {
       color: white; }
+  footer .twitter-feed {
+    background-image: url('/img/twitter-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    min-height: 100px;
+    min-width: 100px; }
   footer .terms {
     text-align: left; }
   footer .credits {

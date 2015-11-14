@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var ClientSchema = new mongoose.Schema(
   {
     name: String,
+    description: String,
     logo: String
   }
 );

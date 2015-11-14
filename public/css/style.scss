@@ -43,7 +43,7 @@ a {
 header {
 
   .header {
-    padding: 5px;
+    padding: 5px 5px 20px 5px;
   }
 
   .navbar-default {
@@ -59,14 +59,11 @@ header {
       width: 100%;
 
       li {
-        
-        a:hover {
+
+        a:hover, a:active, a:visited {
           color: $white;
           background-color: $dark-grey;
-        }
-
-        a.active {
-          background-color: $dark-grey;
+          text-transform: uppercase;
         }
       }
     }
@@ -95,6 +92,7 @@ header {
 
   .header-social {
     text-align: right;
+    font-size: 2em;
 
     ul {
       list-style: none;
@@ -104,7 +102,10 @@ header {
 
         a {
           display: inline-block;
-          color: $primary-color;
+          color: $light-grey;
+          &:hover {
+            color: $dark-grey;
+          }
         }
       }
     }
@@ -135,6 +136,14 @@ footer {
     a {
       color: $white;
     }
+  }
+
+  .twitter-feed {
+    background-image: url('/img/twitter-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    min-height: 100px;
+    min-width: 100px;
   }
 
   .terms {
