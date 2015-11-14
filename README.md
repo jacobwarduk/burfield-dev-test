@@ -1,6 +1,8 @@
 # Contents #
 
  - [Installation](#installation)
+ > Getting Started
+
  > Populating The Database
 
  > Adding Twitter Authentication
@@ -8,8 +10,20 @@
  > Starting The Server
 
  - [Admin API REST Routes](#admin-api-rest-routes)
+ > Clients
+
+ > Team Members
+
+ > Gallery
+
+ > Services
+
+ > Blog Posts
+
+ > Blog Comments
 
  - [To Do](#to-do)
+
 
 ## Installation ##
 
