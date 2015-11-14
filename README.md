@@ -2,7 +2,7 @@
 
  - [About](#about)
  - [Installation](#installation)
- - [REST API Routes](#admin-api-rest-routes)
+ - [REST API Documentation](#admin-api-rest-routes)
  - [To Do](#to-do)
 
 ---
