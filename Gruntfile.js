@@ -10,7 +10,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    "public/js/javascript.min.js": "public/js/javascript.js"
+                    "public/js/javascript.min.js": "public/js/javascript.js",
+                    "public/js/burfield-dev-test.min.js": "public/js/burfield-dev-test.js"
                 }
             }
         },
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ["public/css/style.scss", "public/js/javascript.js"],
+            files: ["public/css/style.scss", "public/js/javascript.js", "public/js/burfield-dev-test.js"],
             tasks: ["uglify", "scss", "cssmin"]
         }
 

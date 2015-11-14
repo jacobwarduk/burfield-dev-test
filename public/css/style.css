@@ -1,3 +1,82 @@
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; }
+
 body {
   padding: 0;
+  margin: 0;
+  color: #191919;
+  font: Helvetica, sans-serif;
+  font-size: 1.2em;
+  background: url('/img/bg.png'); }
+
+.row {
   margin: 0; }
+
+a {
+  color: #dd712e; }
+
+.container {
+  max-width: 1024px;
+  padding: 15px;
+  background-color: white; }
+
+.header-logo {
+  max-width: 100%; }
+
+header .header {
+  padding: 5px; }
+header .navbar-default {
+  background: none;
+  border: 0; }
+header nav {
+  width: 100%; }
+  header nav .nav {
+    background-color: #3c3f3f;
+    width: 100%; }
+    header nav .nav li a:hover {
+      color: white;
+      background-color: #292b2b; }
+    header nav .nav li a.active {
+      background-color: #292b2b; }
+  header nav ul li {
+    height: 100%;
+    font-size: 1.2em; }
+    header nav ul li a {
+      color: white;
+      text-transform: uppercase; }
+header .header-contact {
+  text-align: right;
+  font-weight: bold; }
+  header .header-contact address {
+    display: inline; }
+header .header-social {
+  text-align: right; }
+  header .header-social ul {
+    list-style: none; }
+    header .header-social ul li {
+      display: inline-block; }
+      header .header-social ul li a {
+        display: inline-block;
+        color: #191919; }
+
+footer {
+  color: white;
+  background-color: black; }
+  footer .container {
+    background: none; }
+  footer h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-left: 13px; }
+  footer .footer-top {
+    background-color: #292b2b; }
+  footer .footer-bottom {
+    background-color: black; }
+    footer .footer-bottom a {
+      color: white; }
+  footer .terms {
+    text-align: left; }
+  footer .credits {
+    text-align: right; }
+  footer img.burfield-logo {
+    height: 2em; }

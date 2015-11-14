@@ -3,21 +3,152 @@
   <head>
     <title><%= title %></title>
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap-css-only/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
     <script src="/libs/angular/angular.min.js"></script>
     <script src="/libs/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="/libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="/libs/angular-utils-pagination/dirPagination.js"></script>
+    <script src="/js/burfield-dev-test.min.js"></script>
     <script src="/js/javascript.min.js"></script>
 
     <meta name="fragment" content="!">
 
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="container">
+      <header>
+        <div class="row header">
+          <div class="col-xs-12 col-sm-2">
+            <a href="/" title="<%= title %>"><img src="/img/burfield-logo-black.png" alt="<%= title %>" class="header-logo"></a>
+          </div>
+          <div class="col-xs-12 col-sm-3 pull-right">
+            <div class="row header-social">
+              <ul>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+              </ul>
+            </div>
+            <div class="row header-contact">
+              <address><a href="mailto:info@example.co.uk">info@example.co.uk</a></address> | 01234 567 890
+            </div>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#burfield-nav" aria-expanded="false">
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="burfield-nav">
+              <ul class="nav nav-justified">
+                <li><a href="#" title="Home">Home</a></li>
+                <li><a href="#" title="The Team">The Team</a></li>
+                <li><a href="#" title="Services">Services</a></li>
+                <li><a href="#" title="Our Clients">Our Clients</a></li>
+                <li><a href="#" title="Gallery">Gallery</a></li>
+                <li><a href="#" title="Blog">Blog</a></li>
+                <li><a href="#" title="Contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Angular UI View -->
+      <div class="container">
+        <ui-view></ui-view>
+      </div>
+      <!-- // Angular UI View -->
+
+    </div>
+
+    <footer>
+      <div class="row footer-top">
+        <div class="container">
+          <div class="col-xs-12 col-sm-6">
+            TWITTER PLACEHOLDER
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="row">
+              <h3>Get in Touch</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <p>
+                10 High Street<br />
+                Midsomer Norton<br />
+                Bath, Somerset<br />
+                ABC 123
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <p>
+                Tel: 01234 567 890<br />
+                Email: <a href="mailto:info@example.co.uk">info@example.co.uk</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row footer-bottom">
+        <div class="container">
+          <div class="col-xs-12 col-sm-6 terms">
+            <a href="#">Terms &amp; Conditions</a> / <a href="#">Privacy Policy</a>
+          </div>
+          <div class="col-xs-12 col-sm-6 credits">
+            website by <a href="#"><img src="/img/burfield-logo-white.png" alt="Burfield Logo" class="burfield-logo" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+    <!-- Homepage template -->
+          <script type="text/ng-template" id="/home.html">
+
+                      <div class="col-xs-12">
+                        <div class="clients-header">
+                          <h2>All Clients</h2>
+                        </div>
+
+                        <div ng-repeat="client in clients | orderBy: 'created_at': true" class="clients-list">
+
+                          <b><a href="#/clients/{{client._id}}">{{client.name}} {{client.image}}</a></b>
+                        </div>
+                      </div>
+
+
+                                  <div class="col-xs-12">
+                                    <div class="posts-header">
+                                      <h2>All Posts</h2>
+                                    </div>
+
+                                    <div ng-repeat="post in posts | orderBy: 'created_at': true" class="posts-list">
+
+                                      <b><a href="#/posts/{{post._id}}">{{post.title}} {{post.excerpt}}</a></b>
+                                    </div>
+                                  </div>
+
+          </script>
+
+
+
+
+
+
+
+
   </body>
 </html>

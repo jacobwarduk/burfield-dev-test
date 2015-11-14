@@ -1,6 +1,151 @@
+// Color pallette variables
+$primary-color: #191919;
+$link-color: #dd712e;
+$black: #000;
+$white: #fff;
+$light-grey: #3c3f3f;
+$dark-grey: #292b2b;
+$font-stack: Helvetica, sans-serif;
 
+
+// Angular UI Bootstrap empty href CSS fix
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+}
 
 body {
   padding: 0;
   margin: 0;
+  color: $primary-color;
+  font: $font-stack;
+  font-size: 1.2em;
+  background: url('/img/bg.png');
+}
+
+.row {
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+}
+
+.container {
+  max-width: 1024px;
+  padding: 15px;
+  background-color: $white;
+}
+
+.header-logo {
+  max-width: 100%;
+}
+
+header {
+
+  .header {
+    padding: 5px;
+  }
+
+  .navbar-default {
+    background: none;
+    border: 0;
+  }
+
+  nav {
+    width: 100%;
+
+    .nav {
+      background-color: $light-grey;
+      width: 100%;
+
+      li {
+        
+        a:hover {
+          color: $white;
+          background-color: $dark-grey;
+        }
+
+        a.active {
+          background-color: $dark-grey;
+        }
+      }
+    }
+
+    ul {
+      li {
+        height: 100%;
+        font-size: 1.2em;
+
+        a {
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .header-contact {
+      text-align: right;
+      font-weight: bold;
+
+    address {
+      display: inline;
+    }
+  }
+
+  .header-social {
+    text-align: right;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+
+        a {
+          display: inline-block;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  color: $white;
+  background-color: $black;
+
+  .container {
+    background: none;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-left: 13px;
+  }
+
+  .footer-top {
+    background-color: $dark-grey;
+  }
+
+  .footer-bottom {
+    background-color: $black;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .terms {
+    text-align: left;
+  }
+
+  .credits {
+    text-align: right;
+  }
+
+  img.burfield-logo {
+    height: 2em;
+  }
 }

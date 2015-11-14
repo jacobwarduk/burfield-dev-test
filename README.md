@@ -53,7 +53,7 @@ ___
 
 
 ## Admin API REST Routes ##
-There is no back-end interface or authentication system implemented, however the following API REST routes are available that can be used to make requests.
+There is no back-end interface or authentication system implemented, however the following API REST routes are available that can be used to make limited type of GET and POST requests.
 
 All requests respond in JSON format.
 

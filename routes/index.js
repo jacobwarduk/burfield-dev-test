@@ -199,7 +199,10 @@ router.post('/team', function(req, res, next) {
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', {
+    title: 'Bath Digital Web Design',
+    description: 'Web Design Agency based in Bath &amp; Bristol. We design, develop, promote and support businesses, let us help yours. Contact us on 01761 402461.'
+  });
 });
 
 module.exports = router;

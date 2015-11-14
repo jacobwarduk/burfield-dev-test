@@ -9,6 +9,7 @@
     "angular-bootstrap": "^0.14.3",
     "angular-utils-pagination": "^0.8.2",
     "font-awesome": "^3.2.1",
-    "angular-ui-router": "^0.2.15"
+    "angular-ui-router": "^0.2.15",
+    "bootstrap-css-only": "3.0.0"
   }
 }
