@@ -204,6 +204,8 @@ Adds a new comment to blog post specified by `:id`.
 ## To Do ##
 
  - Make more suitable break points for responsive layout.
+ - Break Angular templates out into separate files.
+ - Implement current best practices for JavaScript/Angular SEO.
  - Create an authentication system and API end points.
  - Create REST API routes for `DELETE` and `PUT` HTTP requests.
  - Create a back end interface for managing content.

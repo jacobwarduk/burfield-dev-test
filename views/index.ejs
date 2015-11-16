@@ -118,40 +118,45 @@
     <!-- Homepage template -->
     <script type="text/ng-template" id="/home.html">
 
-                <div class="col-xs-12">
+
+              <div class="row hr">
+                <div class="col-xs-12 welcome">
+                  <div class="welcome-header">
+                    <h2><%= title %></h2>
+                  </div>
+                  <div class="welcome-text">
+                      <%= description %>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row hr">
+                <div class="col-xs-12 services">
+                  <div ng-repeat="service in services">
+                    <div class="col-xs-12 col-md-3 service">
+                      <img src="{{service.image}}" class="service-image" alt="{{service.title}}" />
+                      <h2>{{service.title}}</h2>
+                      <p class="excerpt">{{service.excerpt}}</p>
+                      <p class="read-more"><a href="#/services/{{service._id}}">Read More</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <div class="col-xs-12 clients">
                   <div class="clients-header">
-                    <h2>All Clients</h2>
+                    <h2>Our Clients</h2>
                   </div>
-
-                  <div ng-repeat="client in clients | orderBy: 'created_at': true" class="clients-list">
-
-                    <b><a href="#/clients/{{client._id}}">{{client.name}} {{client.logo}}</a></b>
-                  </div>
-                </div>
-
-
-                <div class="col-xs-12">
-                  <div class="posts-header">
-                    <h2>All Posts</h2>
-                  </div>
-
-                  <div ng-repeat="post in posts | orderBy: 'created_at': true" class="posts-list">
-
-                    <b><a href="#/posts/{{post._id}}">{{post.title}} {{post.excerpt}}</a></b>
+                  <div ng-repeat="client in clients">
+                    <div class="client">
+                      <a href="#/clients/{{client._id}}"><img src="{{client.logo}}" class="client-image" alt="{{client.name}}" /></a>
+                    </div>
                   </div>
                 </div>
-
-
-                <div class="col-xs-12">
-                  <div class="team-header">
-                    <h2>All Team Members</h2>
-                  </div>
-
-                  <div ng-repeat="member in team | orderBy: 'created_at': true" class="team-list">
-
-                    <b><a href="#/team/{{member._id}}">{{member.name}} {{member.photo}}</a></b>
-                  </div>
-                </div>
+              </div>
 
     </script>
 
