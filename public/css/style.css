@@ -18,6 +18,10 @@ body {
 a {
   color: #dd712e; }
 
+h2 {
+  font-size: 2em;
+  font-weight: bold; }
+
 .container {
   max-width: 1024px;
   padding: 15px;
@@ -72,6 +76,8 @@ footer {
   footer h3 {
     font-size: 1.5em;
     margin-top: 0;
+    font-weight: bold; }
+  footer .contact h3 {
     margin-left: 13px; }
   footer .footer-top {
     background-color: #292b2b; }
@@ -82,7 +88,7 @@ footer {
   footer .twitter-feed {
     background-image: url('/img/twitter-bg.png');
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: bottom right;
     min-height: 100px;
     min-width: 100px; }
   footer .terms {
@@ -100,7 +106,7 @@ footer {
   text-align: center;
   padding: 25px 0; }
   .services .service-image {
-    max-width: 100%; }
+    max-width: 60%; }
   .services .read-more {
     text-transform: uppercase;
     font-weight: bold; }

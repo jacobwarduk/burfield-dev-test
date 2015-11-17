@@ -76,11 +76,19 @@
     <footer>
       <div class="row footer-top">
         <div class="container">
-          <div class="col-xs-12 col-sm-6 twitter-feed">
-            TWITTER PLACEHOLDER
-          </div>
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12 col-sm-4 twitter-feed">
             <div class="row">
+              <h3>Latest From Twitter</h3>
+            </div>
+            <div class="row">
+              <%= tweet.text %>
+            </div>
+            <div class="row">
+              <a href="<%= tweet.link %>" target="_blank"><%= tweet.time %></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 pull-right">
+            <div class="row contact">
               <h3>Get in Touch</h3>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -133,7 +141,7 @@
               <div class="row hr">
                 <div class="col-xs-12 services">
                   <div ng-repeat="service in services">
-                    <div class="col-xs-12 col-md-3 service">
+                    <div class="col-xs-12 col-sm-6 col-md-3 service">
                       <img src="{{service.image}}" class="service-image" alt="{{service.title}}" />
                       <h2>{{service.title}}</h2>
                       <p class="excerpt">{{service.excerpt}}</p>

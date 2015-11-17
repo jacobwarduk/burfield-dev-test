@@ -3,6 +3,8 @@ var passport = require('passport');
 var jwt = require('express-jwt');
 var mongoose = require('mongoose');
 
+var Twitter = require('twitter');
+
 var router = express.Router();
 
 var Client = mongoose.model('Client');
@@ -11,6 +13,28 @@ var Gallery = mongoose.model('Gallery');
 var Post = mongoose.model('Post');
 var Service = mongoose.model('Service');
 var Team = mongoose.model('Team');
+
+// Creating new Twiiter client
+var client = new Twitter({
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
+});
+
+var tweet = {};
+
+// Getting latest tweet
+client.get('/statuses/user_timeline.json?screen_name=BurfieldCreativ&count=1', function(err, tweets, res) {
+  if (err) {
+    throw err;
+  }
+  tweet.id = tweets[0].id;
+  tweet.text = tweets[0].text;
+  tweet.time = tweets[0].created_at;
+  tweet.link = 'https://twitter.com/' + tweets[0].user.screen_name;
+  console.log(tweets);
+})
 
 // Route to return all clients
 router.get('/clients', function(req, res, next) {
@@ -201,7 +225,8 @@ router.post('/team', function(req, res, next) {
 router.get('/', function(req, res) {
   res.render('index', {
     title: 'Bath Digital Web Design',
-    description: 'Web Design Agency based in Bath &amp; Bristol. We design, develop, promote and support businesses, let us help yours. Contact us on 01761 402461.'
+    description: 'We work with businesses all over the world, from the USA to Sweden, through to the heart of Somerset. Our heart, however, belongs to Bath. We’re located just twenty minutes from Bath city centre and work with clients from all over the city and surrounding area. Looking to invest in stylish, forward-thinking web design?',
+    tweet: tweet
   });
 });
 

@@ -35,6 +35,11 @@ a {
   color: $link-color;
 }
 
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 .container {
   max-width: 1024px;
   padding: 15px;
@@ -128,7 +133,12 @@ footer {
   h3 {
     font-size: 1.5em;
     margin-top: 0;
-    margin-left: 13px;
+    font-weight: bold;
+  }
+  .contact {
+    h3 {
+      margin-left: 13px;
+    }
   }
 
   .footer-top {
@@ -146,7 +156,7 @@ footer {
   .twitter-feed {
     background-image: url('/img/twitter-bg.png');
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: bottom right;
     min-height: 100px;
     min-width: 100px;
   }
@@ -179,7 +189,7 @@ footer {
   padding: 25px 0;
 
    .service-image {
-     max-width: 100%;
+     max-width: 60%;
    }
 
    .read-more {
