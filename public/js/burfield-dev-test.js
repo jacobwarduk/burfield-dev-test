@@ -125,6 +125,13 @@ app.factory('posts', ['$http', function($http, auth) {
     });
   };
 
+  // Methos to retrieve a specific number of posts
+  p.get = function(num) {
+    return $http.get('/posts', 'limit=' + num).then(function(res) {
+      return res.data;
+    });
+  };
+
   return p;   // Returning posts object
 }]);
 
@@ -180,6 +187,18 @@ app.config([
           }]
         }
       });
+
+      // URL routing for team page
+      $stateProvider.state('team', {
+          url: '/team',
+          templateUrl: '/team.html',
+          controller: 'MainCtrl',
+          resolve: {
+            teamPromise: ['team', function(team) {
+              return team.getAll();
+            }]
+          }
+        });
 
 
     // Redirecting to home page

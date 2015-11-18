@@ -20,7 +20,7 @@ body {
   color: $primary-color;
   font: $font-stack;
   font-size: 1.2em;
-  background: url('/img/bg.png');
+  background: url('/img/bg.jpg');
 }
 
 .row {
@@ -38,6 +38,10 @@ a {
 h2 {
   font-size: 2em;
   font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 .container {
@@ -196,6 +200,22 @@ footer {
      text-transform: uppercase;
      font-weight: bold;
    }
+}
+
+.team {
+  .members {
+    text-align: center;
+    margin-bottom: 15px;
+
+    img.member-image {
+      max-width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+  }
 }
 
 .clients {

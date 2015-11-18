@@ -168,10 +168,32 @@
 
     </script>
 
+    <!-- Team template -->
+    <script type="text/ng-template" id="/team.html">
 
+    <div class="row hr">
+      <div class="col-xs-12 welcome">
+        <div class="welcome-header">
+          <h2>Meet our Team of Web Experts</h2>
+        </div>
+        <div class="team-text">
+            Each of us is an expert in our field, working at the top of our game, driven to create the new and the outstanding, and always seeing the bigger picture. But we have our feet on the ground. We’re not work obsessives, we’re just obsessed with doing things well (and making clients happy). And we have lives that enrich and inform our work.
+        </div>
+    </div>
 
+    <div class="row">
+      <div class="col-xs-12 team">
+        <div ng-repeat="member in team">
+          <div class="col-xs-12 col-sm-6 col-md-3 members">
+            <a href="#/team/{{member._id}}"><img src="{{member.photo}}" class="member-image img-circle" alt="{{member.name}}" /></a>
+            <h3>{{member.name}}</h3>
+            <p class="excerpt">{{smember.role}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
+    </script>
 
 
 
